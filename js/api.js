@@ -35,9 +35,9 @@ var API = (() => {
       adminPassword: 'admin123',
       shopInfo: {
         name: 'ROMAND Beauty Store',
-        hotline: '1900 636 510',
-        email: 'contact@romandstore.io.vn',
-        address: '123 Lê Lợi, Quận 1, TP. Hồ Chí Minh'
+        hotline: '0795683918',
+        email: 'daolyy291106@gmail.com',
+        address: 'Bình Dương'
       }
     });
   }
