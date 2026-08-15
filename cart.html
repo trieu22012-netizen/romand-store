@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giỏ hàng - ROMAND Beauty Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main>
+    <div class="container cart-wrap">
+      <div>
+        <h2 style="margin-bottom:20px">🛒 Giỏ hàng của bạn</h2>
+        <div class="cart-list" data-cart></div>
+      </div>
+      <aside class="summary" data-summary>
+        <h3>Tóm tắt đơn hàng</h3>
+        <div class="free-ship" data-freeship></div>
+        <div class="row"><span>Tạm tính</span><b data-subtotal>0₫</b></div>
+        <div class="row"><span>Phí vận chuyển</span><b data-ship>0₫</b></div>
+        <div class="row total"><span>Tổng cộng</span><b data-total>0₫</b></div>
+        <button class="btn btn-rose btn-block" data-checkout>Tiến hành đặt hàng</button>
+      </aside>
+    </div>
+  </main>
+
+  <script src="js/store-data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

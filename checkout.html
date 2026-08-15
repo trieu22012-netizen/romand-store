@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đặt hàng - ROMAND Beauty Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main>
+    <div class="container checkout-wrap">
+      <form class="form-card" data-form novalidate>
+        <h3>📋 Thông tin giao hàng</h3>
+        <div class="field" data-field="name">
+          <label>Họ và tên *</label>
+          <input type="text" name="name" placeholder="Nguyễn Thị Hoa" />
+          <div class="err">Vui lòng nhập họ tên</div>
+        </div>
+        <div class="field" data-field="phone">
+          <label>Số điện thoại *</label>
+          <input type="tel" name="phone" placeholder="09xxxxxxxx" />
+          <div class="err">Số điện thoại không hợp lệ (10-11 số)</div>
+        </div>
+        <div class="field" data-field="address">
+          <label>Địa chỉ giao hàng *</label>
+          <input type="text" name="address" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành" />
+          <div class="err">Vui lòng nhập địa chỉ giao hàng</div>
+        </div>
+        <div class="field">
+          <label>Ghi chú (tuỳ chọn)</label>
+          <textarea name="note" rows="3" placeholder="Ghi chú thêm cho cửa hàng..."></textarea>
+        </div>
+
+        <h3 style="margin-top:26px">💳 Phương thức thanh toán</h3>
+        <div class="pay-options" data-pay>
+          <label class="pay-opt selected">
+            <input type="radio" name="pay" value="cod" checked />
+            <span class="ico">💵</span>
+            <div><b>Thanh toán khi nhận hàng (COD)</b><small>Trả tiền khi nhận được hàng</small></div>
+          </label>
+          <label class="pay-opt">
+            <input type="radio" name="pay" value="bank" />
+            <span class="ico">🏦</span>
+            <div><b>Chuyển khoản ngân hàng</b><small>Chuyển khoản rồi xác nhận với shop</small></div>
+          </label>
+          <label class="pay-opt">
+            <input type="radio" name="pay" value="momo" />
+            <span class="ico">📱</span>
+            <div><b>Ví MoMo</b><small>Thanh toán qua ví điện tử MoMo</small></div>
+          </label>
+        </div>
+
+        <button class="btn btn-rose btn-block" style="margin-top:24px" data-submit>Xác nhận đặt hàng</button>
+      </form>
+
+      <aside class="summary" data-summary>
+        <h3>Đơn hàng của bạn</h3>
+        <div data-items></div>
+        <div class="row"><span>Tạm tính</span><b data-subtotal>0₫</b></div>
+        <div class="row"><span>Phí vận chuyển</span><b data-ship>0₫</b></div>
+        <div class="row total"><span>Tổng cộng</span><b data-total>0₫</b></div>
+      </aside>
+    </div>
+  </main>
+
+  <script src="js/store-data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

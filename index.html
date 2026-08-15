@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROMAND Beauty Store - Son Romand chính hãng Hàn Quốc</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div>
+          <h1>Son Romand <span>chính hãng</span> Hàn Quốc</h1>
+          <p>Juicy Lasting Tint, Zero Velvet Tint, Glasting Water Tint... hàng trăm sắc màu cho đôi môi căng mọng. Giá tốt, giao nhanh toàn quốc.</p>
+          <div class="hero-actions">
+            <a href="#products" class="btn btn-rose">Mua sắm ngay</a>
+            <a href="track.html" class="btn btn-outline">Tra cứu đơn hàng</a>
+          </div>
+          <div class="hero-stats">
+            <div><div class="num">100%</div><div class="lbl">Hàng chính hãng</div></div>
+            <div><div class="num">100+</div><div class="lbl">Màu son</div></div>
+            <div><div class="num">7 ngày</div><div class="lbl">Đổi trả dễ dàng</div></div>
+          </div>
+        </div>
+        <div class="hero-visual" data-hero></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title"><small>Sản phẩm nổi bật</small> Best Seller</h2>
+        </div>
+        <div class="grid" data-featured></div>
+      </div>
+    </section>
+
+    <section class="section" id="products" style="padding-top:0">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title"><small>Toàn bộ cửa hàng</small> Son Romand</h2>
+          <span class="result-count" data-count style="color:var(--muted);font-size:14px"></span>
+        </div>
+        <div class="filters">
+          <button class="filter-chip active" data-line="">Tất cả</button>
+          <span data-lines></span>
+          <select class="filter-select" data-sort>
+            <option value="default">Sắp xếp mặc định</option>
+            <option value="newest">Mới nhất</option>
+            <option value="popular">Bán chạy nhất</option>
+            <option value="price-asc">Giá thấp đến cao</option>
+            <option value="price-desc">Giá cao đến thấp</option>
+          </select>
+        </div>
+        <div class="grid" data-products></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/store-data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

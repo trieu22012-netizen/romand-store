@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chi tiết sản phẩm - ROMAND Beauty Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main>
+    <div class="container" data-loading style="padding:60px 20px;text-align:center;color:var(--muted)">Đang tải sản phẩm...</div>
+    <div class="container detail" data-detail style="display:none">
+      <div class="detail-img"><img data-dimg src="" alt="" /></div>
+      <div class="detail-info">
+        <h1 data-dname></h1>
+        <div class="detail-meta">
+          <span>Thương hiệu: <b>Romand (Hàn Quốc)</b></span>
+          <span>Dòng son: <b data-dline></b></span>
+          <span>Trọng lượng: <b data-dweight></b></span>
+          <span>Đã bán: <b data-dsold></b></span>
+        </div>
+        <div class="detail-price">
+          <span class="cur" data-dprice></span>
+          <span class="old" data-dold></span>
+          <span class="save" data-dsave></span>
+        </div>
+        <p class="detail-desc" data-ddesc></p>
+
+        <div class="color-label">Chọn màu son: <span data-selname></span></div>
+        <div class="color-swatches" data-swatches></div>
+
+        <div class="color-preview">
+          <span class="pdot" data-pdot></span>
+          <div class="ptext">Màu đã chọn: <b data-ptext></b><small data-pprice></small></div>
+        </div>
+
+        <div class="qty-row">
+          <span class="qty-label">Số lượng:</span>
+          <div class="qty">
+            <button data-minus>−</button>
+            <input type="text" inputmode="numeric" value="1" data-qty />
+            <button data-plus>+</button>
+          </div>
+        </div>
+
+        <div class="detail-actions">
+          <button class="btn btn-rose" data-add>🛒 Thêm vào giỏ hàng</button>
+          <button class="btn btn-dark" data-buy>Mua ngay</button>
+        </div>
+
+        <div class="trust">
+          <div class="t"><div class="tico">🚚</div><div class="tt">Freeship 500K+</div><div class="ts">Giao toàn quốc</div></div>
+          <div class="t"><div class="tico">✅</div><div class="tt">Chính hãng 100%</div><div class="ts">Nhập khẩu Hàn Quốc</div></div>
+          <div class="t"><div class="tico">🔄</div><div class="tt">Đổi trả 7 ngày</div><div class="ts">Hỗ trợ nhiệt tình</div></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/store-data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

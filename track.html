@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tra cứu đơn hàng - ROMAND Beauty Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container" style="padding:50px 20px">
+    <h2 style="text-align:center;margin-bottom:6px">🔍 Tra cứu đơn hàng</h2>
+    <p style="text-align:center;color:var(--muted);margin-bottom:24px">Nhập mã đơn hàng hoặc số điện thoại để kiểm tra tình trạng đơn</p>
+
+    <form class="track-form" data-form>
+      <div class="tabs">
+        <button type="button" class="tab active" data-tab="code">Theo mã đơn</button>
+        <button type="button" class="tab" data-tab="phone">Theo số điện thoại</button>
+      </div>
+      <div class="field" data-field="code">
+        <input type="text" name="code" placeholder="VD: RMD260812-XXXX" />
+      </div>
+      <div class="field" data-field="phone" style="display:none">
+        <input type="tel" name="phone" placeholder="Nhập số điện thoại đã đặt hàng" />
+      </div>
+      <button class="btn btn-rose btn-block" type="submit">Tra cứu</button>
+    </form>
+
+    <div data-results></div>
+  </main>
+
+  <script src="js/store-data.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/track.js"></script>
+</body>
+</html>
