@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản trị - ROMAND Beauty Store</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="admin-body">
+  <aside class="admin-sidebar">
+    <div class="abrand">
+      <div class="bname">ROMAND <span style="color:#ff9fb0">Admin</span></div>
+      <div style="font-size:12px;color:#c9b3b9;margin-top:4px">Quản lý cửa hàng</div>
+    </div>
+    <nav>
+      <a href="#" data-view="dashboard" class="active">📊 Thống kê</a>
+      <a href="#" data-view="orders">📦 Đơn hàng</a>
+      <a href="#" data-view="products">💄 Sản phẩm</a>
+      <a href="#" data-view="settings">⚙️ Cài đặt</a>
+      <a href="#" data-logout>🚪 Đăng xuất</a>
+      <a href="../" style="border-top:1px solid #554145;margin-top:10px">🌐 Xem cửa hàng</a>
+    </nav>
+  </aside>
+
+  <main class="admin-main">
+    <!-- Dashboard -->
+    <section data-view-panel="dashboard">
+      <div class="admin-top"><h2>Thống kê cửa hàng</h2></div>
+      <div class="stat-cards">
+        <div class="stat-card"><div class="sl">Tổng doanh thu</div><div class="sv" data-s-rev>0₫</div></div>
+        <div class="stat-card"><div class="sl">Số đơn hàng</div><div class="sv" data-s-orders>0</div></div>
+        <div class="stat-card"><div class="sl">Sản phẩm đang bán</div><div class="sv" data-s-products>0</div></div>
+      </div>
+      <div class="table-card">
+        <h3 style="padding:16px">Tình trạng đơn hàng</h3>
+        <table>
+          <thead><tr><th>Trạng thái</th><th>Số đơn</th></tr></thead>
+          <tbody data-dash-status></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Orders -->
+    <section data-view-panel="orders" style="display:none">
+      <div class="admin-top">
+        <h2>Quản lý đơn hàng</h2>
+        <select class="filter-select" data-order-filter>
+          <option value="">Tất cả trạng thái</option>
+          <option value="pending">Chờ xác nhận</option>
+          <option value="confirmed">Đã xác nhận</option>
+          <option value="shipping">Đang giao hàng</option>
+          <option value="delivered">Đã giao</option>
+          <option value="cancelled">Đã huỷ</option>
+        </select>
+      </div>
+      <div class="table-card">
+        <table>
+          <thead><tr><th>Mã đơn</th><th>Khách hàng</th><th>SDT</th><th>Địa chỉ</th><th>Tổng tiền</th><th>Thanh toán</th><th>Trạng thái</th><th>Thời gian</th><th>Thao tác</th></tr></thead>
+          <tbody data-order-rows></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section data-view-panel="products" style="display:none">
+      <div class="admin-top">
+        <h2>Quản lý sản phẩm</h2>
+        <button class="btn btn-rose" data-add-product>+ Thêm sản phẩm</button>
+      </div>
+      <div class="table-card">
+        <table>
+          <thead><tr><th>Ảnh</th><th>Tên sản phẩm</th><th>Dòng son</th><th>Giá</th><th>Màu</th><th>Kho</th><th>Đã bán</th><th>Thao tác</th></tr></thead>
+          <tbody data-product-rows></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section data-view-panel="settings" style="display:none">
+      <div class="admin-top"><h2>Cài đặt cửa hàng</h2></div>
+      <div class="form-card" style="max-width:640px">
+        <h3>Phí vận chuyển</h3>
+        <div class="field">
+          <label>Phí ship (₫)</label>
+          <input type="number" data-set-shippingFee placeholder="30000" />
+        </div>
+        <div class="field">
+          <label>Đơn miễn phí ship từ (₫)</label>
+          <input type="number" data-set-freeShipThreshold placeholder="500000" />
+        </div>
+        <h3 style="margin-top:20px">Thông tin shop</h3>
+        <div class="field"><label>Tên shop</label><input type="text" data-set-shopname /></div>
+        <div class="field"><label>Hotline</label><input type="text" data-set-hotline /></div>
+        <div class="field"><label>Email</label><input type="text" data-set-email /></div>
+        <div class="field"><label>Địa chỉ</label><input type="text" data-set-address /></div>
+        <h3 style="margin-top:20px">Đổi mật khẩu quản trị</h3>
+        <div class="field"><label>Mật khẩu mới</label><input type="password" data-set-password placeholder="Nhập mật khẩu mới (bỏ trống nếu không đổi)" /></div>
+        <button class="btn btn-rose" data-save-settings>Lưu cài đặt</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Product modal -->
+  <div data-pmodal></div>
+
+  <script src="../js/store-data.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>
