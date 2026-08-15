@@ -36,9 +36,9 @@ function layoutFooter() {
       </div>
       <div>
         <h4>Liên hệ</h4>
-        <a href="tel:1900636510">Hotline: 1900 636 510</a>
-        <a href="mailto:contact@romandstore.io.vn">contact@romandstore.io.vn</a>
-        <a href="#">123 Lê Lợi, Quận 1, TP.HCM</a>
+        <a href="tel:0795683918">Hotline: 0795683918</a>
+        <a href="mailto:daolyy291106@gmail.com">daolyy291106@gmail.com</a>
+        <a href="#">Bình Dương</a>
       </div>
       <div>
         <h4>Hỗ trợ khách hàng</h4>
